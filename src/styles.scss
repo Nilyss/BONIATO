@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Clarendon';
+  src: url('assets/fonts/Clarendon.woff2') format('woff2'),
+  url('assets/fonts/Clarendon.woff') format('woff'),
+  url('assets/fonts/Clarendon.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ********** GLOBAL SCSS FILE **********
+// RESET STYLES
+html,
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
