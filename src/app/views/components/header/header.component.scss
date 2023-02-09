@@ -1,0 +1,161 @@
+@use '../../../utils/styles/variables' as variables;
+@use '../../../utils/styles/mixins' as mixins;
+@use '../../../utils/styles/keyframes' as keyframes;
+
+.headerWrapper {
+  display: flex;
+  flex-flow: column;
+}
+
+// ********** TOP CONTAINER **********
+.header__topContainer {
+  background: variables.$backgroundColor-secondary;
+}
+
+.header__topContainer__nav {
+  @media(max-width: variables.$breakpointMobile) {
+    flex-flow: column;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 5em;
+}
+
+// ***** LEFT CONTAINER *****
+
+.header__topContainer__nav__leftContainer {
+  @media(max-width: variables.$breakpointMobile) {
+    flex-flow: column;
+    gap: .5em;
+    margin-bottom: 1em;
+    font-size: 14px;
+    align-items: center;
+  }
+  display: flex;
+  gap: 2em;
+}
+
+.header__topContainer__nav__leftContainer__elements {
+  list-style: none;
+  color: variables.$backgroundColor-primary;
+  display: flex;
+  gap: 0.5em;
+  cursor: default;
+  font-family: variables.$boniatoFontFamily;
+}
+
+.header__topContainer__nav__leftContainer__elements__texts--link {
+  color: variables.$backgroundColor-primary;
+  text-decoration: none;
+  &:hover {
+    color: variables.$fontColor-secondary;
+    text-decoration: underline;
+  }
+}
+
+// ***** RIGHT CONTAINER *****
+
+.header__topContainer__nav__rightContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.header__topContainer__nav__rightContainer__button {
+  @include mixins.buttonStyle;
+  color: variables.$fontColor-secondary;
+  background: variables.$backgroundColor-primary;
+}
+
+// ********** BOTTOM CONTAINER **********
+.header__bottomContainer {
+  @media(max-width: variables.$breakpointMobile) {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    min-height: 45vh;
+  }
+  background: variables.$backgroundColor-primary;
+  display: flex;
+  box-shadow: variables.$boxShadow;
+}
+
+.header__bottomContainer__logoWrapper {
+  @media(max-width: variables.$breakpointMobile) {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  padding: 1.5em 5em;
+  width: 25%;
+}
+
+.header__bottomContainer__logoWrapper__logo {
+  @media(max-width: variables.$breakpointTablet) {
+    width: 125px;
+  }
+  @media(max-width: variables.$breakpointMobile) {
+    width: 175px;
+    transform: rotate(-15deg);
+  }
+  width: 100%;
+  cursor: pointer;
+}
+
+.header__bottomContainer__nav {
+  @media(max-width: variables.$breakpointMobile) {
+    flex-flow: column;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.header__bottomContainer__nav__list {
+  @media(max-width: variables.$breakpointMobile) {
+    margin-bottom: .5em;
+  }
+  display: flex;
+}
+
+.header__bottomContainer__nav__list__elements {
+  @media (max-width: variables.$breakpointTablet) {
+    font-size: 16px;
+  }
+  list-style: none;
+  font-family: variables.$boniatoFontFamily;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    color: variables.$fontColor-tertiary;
+    text-decoration: underline 3px solid variables.$fontColor-tertiary;
+  }
+}
+
+.header__bottomContainer__buttonContainer {
+  @media(max-width: variables.$breakpointMobile) {
+    order: 1;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+.header__bottomContainer__buttonContainer__buttonWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.header__bottomContainer__buttonContainer__buttonWrapper__button {
+  @include mixins.buttonStyle;
+  color: variables.$fontColor-secondary;
+  background: variables.$backgroundColor-secondary;
+  &:active {
+    background: variables.$backgroundColor-primary;
+  }
+}

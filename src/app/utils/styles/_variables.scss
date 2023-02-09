@@ -1,2 +1,22 @@
 // ********** FONTS **********
 $boniatoFontFamily: 'Clarendon', sans-serif;
+
+// ********** COLORS **********
+$fontColor-primary: #f2f2f2;
+$fontColor-secondary: #2b2a33;
+$fontColor-tertiary: #ff8e5e;
+$fontColor-quaternary: #808080;
+$fontColor-quinary: #4dab00;
+
+$backgroundColor-primary: #fff8ee;
+$backgroundColor-secondary: #ff8e5e;
+
+// ********** BREAKPOINTS **********
+$breakpointLaptop: 1366px;
+$breakpointTablet: 1024px;
+$breakpointMobile: 768px;
+
+// ********** SHADOWS **********
+$boxShadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+$dropShadow: drop-shadow(20px 10px 4px rgba(20, 20, 20, 0.2));

@@ -1,0 +1,55 @@
+@use './variables' as variables;
+
+@mixin buttonStyle {
+  @media (max-width: variables.$breakpointTablet) {
+    font-size: 14px;
+    padding: 2px;
+  }
+  font-size: 16px;
+  font-weight: 400;
+  color: variables.$fontColor-quaternary;
+  align-items: center;
+  background-color: variables.$fontColor-secondary;
+  border-radius: 4px;
+  border: 2px solid variables.$fontColor-secondary;
+  display: flex;
+  justify-content: center;
+  line-height: 24px;
+  width: 150px;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: variables.$boniatoFontFamily;
+  &:hover {
+    outline: 0;
+  }
+  &:active {
+    background: variables.$fontColor-tertiary;
+  }
+  &::after {
+    @media (max-width: variables.$breakpointTablet) {
+      height: 30px;
+    }
+    content: '';
+    background-color: variables.$fontColor-secondary;
+    border-radius: 4px;
+    display: block;
+    height: 30px;
+    width: 150px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    transform: translate(8px, 8px);
+    transition: transform 200ms ease-out;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: translate(0, 0);
+  }
+
+  &:active::after {
+    outline: 0;
+  }
+}
