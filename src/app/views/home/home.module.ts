@@ -9,6 +9,7 @@ import { HomeComponent } from './home.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { BannerComponent } from '../components/homeComponents/banner/banner.component';
 import { PreviewComponent } from '../components/homeComponents/preview/preview.component';
+import { HomeMenuComponent } from '../components/homeComponents/home-menu/home-menu.component';
 import { FooterComponent } from '../components/footer/footer.component';
 
 const homeRoutes: Routes = [{ path: '', component: HomeComponent }];
@@ -19,6 +20,7 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }];
     HeaderComponent,
     BannerComponent,
     PreviewComponent,
+    HomeMenuComponent,
     FooterComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(homeRoutes), FontAwesomeModule],

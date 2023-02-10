@@ -32,7 +32,7 @@ import * as BrandIcons from '@fortawesome/free-brands-svg-icons';
             </button>
           </div>
         </div>
-        <p class="banner__orderPrice">Prix : 10.50€</p>
+        <p class="banner__orderPrice">Prix : 9.90€</p>
       </div>
       <div class="banner__containerBottom">
         <div

@@ -103,6 +103,9 @@
 
 .banner__orderButtonContainer__wrapper__button {
   @include mixins.buttonStyle;
+  &:active{
+    background: variables.$backgroundColor-primary;
+  }
 }
 
 .banner__orderPrice {

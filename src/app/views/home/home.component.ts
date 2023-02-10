@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
       <main class="main">
         <app-banner></app-banner>
         <app-preview></app-preview>
+        <app-home-menu></app-home-menu>
       </main>
       <app-footer></app-footer>
     </body>

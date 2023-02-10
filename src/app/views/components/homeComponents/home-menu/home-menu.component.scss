@@ -1,0 +1,135 @@
+@use 'src/app/utils/styles/variables' as variables;
+@use 'src/app/utils/styles/mixins' as mixins;
+@use 'src/app/utils/styles/keyframes' as keyframes;
+
+.home-menu {
+  background: variables.$backgroundColor-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  padding: 8em;
+}
+
+.home-menu__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+// ********** TITLE WRAPPER **********
+
+.home-menu__container__titleWrapper {
+  color: variables.$fontColor-secondary;
+  text-align: center;
+  font-family: variables.$boniatoFontFamily;
+  cursor: default;
+}
+
+.home-menu__container__titleWrapper__title {
+  font-size: 28px;
+}
+
+.home-menu__container__titleWrapper__subtitle {
+  font-size: 14px;
+}
+
+// ********** NAV WRAPPER **********
+.home-menu__container__navigationWrapper {
+  font-family: variables.$boniatoFontFamily;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.home-menu__container__navigationWrapper__nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  font-size: 18px;
+  color: variables.$fontColor-tertiary;
+}
+
+.home-menu__container__navigationWrapper__nav__listWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-menu__container__navigationWrapper__nav__listWrapper__elements {
+  list-style: none;
+  filter: variables.$dropShadow;
+  transition: all 200ms ease-in-out;
+  padding: .7em 1em .4em 1em; // centering text due to font-family
+  &:hover {
+    transition: all 200ms ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+    background: variables.$backgroundColor-secondary;
+    color: variables.$fontColor-primary;
+  }
+}
+
+// ********** MENU WRAPPER **********
+.home-menu__container__menuWrapper {
+  width: 100%;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+// ***** LEFT MENU WRAPPER *****
+.home-menu__container__menuWrapper__leftContainer {
+  max-width: 50%;
+}
+
+.home-menu__container__menuWrapper__leftContainer__pictureWrapper {
+  width: 75%;
+}
+
+.home-menu__container__menuWrapper__leftContainer__pictureWrapper__picture {
+  width: 100%;
+}
+
+
+// ***** RIGHT MENU WRAPPER *****
+.home-menu__container__menuWrapper__rightContainer {
+  max-width: 50%;
+}
+
+.home-menu__container__menuWrapper__rightContainer__listWrapper {
+}
+
+.home-menu__container__menuWrapper__rightContainer__listWrapper__elements {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  gap: .3em;
+  margin-bottom: 2em;
+  font-family: variables.$boniatoFontFamily;
+  color: variables.$fontColor-secondary;
+  border-bottom: 2px dotted variables.$fontColor-tertiary;
+  padding-bottom: .5em;
+  cursor: default;
+}
+
+.home-menu__container__menuWrapper__rightContainer__listWrapper__elements__title {
+  color: variables.$fontColor-tertiary;
+  font-size: 18px;
+}
+
+.home-menu__container__menuWrapper__rightContainer__listWrapper__elements__overview {
+  font-size: 14px;
+}
+
+.home-menu__container__menuWrapper__rightContainer__listWrapper__elements__price {
+  color: variables.$fontColor-tertiary;
+  display: flex;
+  align-self: flex-end;
+  margin-top: .8em;
+  font-size: 18px;
+}
