@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
       <app-header></app-header>
       <main class="main">
         <app-banner></app-banner>
+        <app-preview></app-preview>
       </main>
       <app-footer></app-footer>
     </body>

@@ -7,7 +7,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // ********** COMPONENTS **********
 import { HomeComponent } from './home.component';
 import { HeaderComponent } from '../components/header/header.component';
-import { BannerComponent } from '../components/banner/banner.component';
+import { BannerComponent } from '../components/homeComponents/banner/banner.component';
+import { PreviewComponent } from '../components/homeComponents/preview/preview.component';
 import { FooterComponent } from '../components/footer/footer.component';
 
 const homeRoutes: Routes = [{ path: '', component: HomeComponent }];
@@ -17,6 +18,7 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }];
     HomeComponent,
     HeaderComponent,
     BannerComponent,
+    PreviewComponent,
     FooterComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(homeRoutes), FontAwesomeModule],
