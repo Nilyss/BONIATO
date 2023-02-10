@@ -1,0 +1,99 @@
+@use 'src/app/utils/styles/variables' as variables;
+@use 'src/app/utils/styles/mixins' as mixins;
+@use 'src/app/utils/styles/keyframes' as keyframes;
+
+.preview {
+  @media (max-width: variables.$breakpointTablet) {
+    padding: 2em 4em;
+    flex-flow: column;
+  }
+  @media (max-width: variables.$breakpointMobile) {
+    padding: 4em 1em;
+  }
+  background: variables.$backgroundColor-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  padding: 2em 8em;
+}
+
+// ********** LEFT CONTAINER **********
+.leftContainer {
+  @media (max-width: variables.$breakpointTablet) {
+    display: none;
+  }
+  width: 25%;
+}
+
+.leftContainer__imageWrapper__image {
+  width: 100%;
+  border-radius: 8px;
+  filter: variables.$dropShadow;
+}
+
+// ********** CENTER CONTAINER **********
+.centerContainer {
+  @media (max-width: variables.$breakpointTablet) {
+    width: 100%;
+  }
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.centerContainer__textWrapper {
+  @media (max-width: variables.$breakpointTablet) {
+    width: 100%;
+  }
+  font-family: variables.$boniatoFontFamily;
+  color: variables.$fontColor-secondary;
+  width: 400px;
+  display: flex;
+  flex-flow: column;
+}
+
+.centerContainer__textWrapper__subtitle {
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  filter: variables.$dropShadow;
+}
+
+.centerContainer__textWrapper__title {
+  text-transform: uppercase;
+  color: variables.$fontColor-tertiary;
+  margin-bottom: 1em;
+  filter: variables.$dropShadow;
+}
+
+.centerContainer__textWrapper__listWrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.centerContainer__textWrapper__listWrapper__elements {
+  list-style: none;
+}
+
+.centerContainer__textWrapper__listWrapper__elements--icon {
+  color: variables.$fontColor-tertiary;
+}
+
+// ********** RIGHT CONTAINER **********
+
+.rightContainer {
+  @media (max-width: variables.$breakpointTablet) {
+    width: 100%;
+  }
+  width: 35%;
+}
+
+.rightContainer__imageWrapper__image {
+  width: 100%;
+  border-radius: 8px;
+  filter: variables.$dropShadow;
+}

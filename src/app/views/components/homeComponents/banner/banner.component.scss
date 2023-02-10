@@ -1,0 +1,129 @@
+@use 'src/app/utils/styles/variables' as variables;
+@use 'src/app/utils/styles/mixins' as mixins;
+@use 'src/app/utils/styles/keyframes' as keyframes;
+
+.banner {
+  @media (max-width: variables.$breakpointTablet) {
+    padding: 2em 4em;
+  }
+  @media (max-width: variables.$breakpointMobile) {
+    padding: 4em 1em;
+  }
+  display: flex;
+  flex-flow: column;
+  background: variables.$backgroundColor-primary;
+  padding: 5em 8em;
+}
+
+.banner__containerTop {
+  @media (max-width: variables.$breakpointMobile) {
+    flex-flow: column;
+  }
+  width: 100%;
+  padding: 0 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.banner__containerMiddle {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__containerBottom {
+  display: flex;
+  gap: 1em;
+  margin-top: 4em;
+}
+
+// ********** TITLE **********
+.banner__titleWrapper {
+  @media (max-width: variables.$breakpointMobile) {
+    width: 300px;
+  }
+  font-style: oblique;
+  font-family: variables.$boniatoFontFamily;
+  text-transform: uppercase;
+  width: 680px;
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+  filter: variables.$dropShadow;
+  cursor: default;
+}
+
+.banner__titleWrapper__subtitle {
+  @media (max-width: variables.$breakpointTablet) {
+    font-size: 18px;
+  }
+  color: variables.$fontColor-tertiary;
+  font-size: 22px;
+}
+
+.banner__titleWrapper__title {
+  @media (max-width: variables.$breakpointTablet) {
+    font-size: 28px;
+  }
+  @media (max-width: variables.$breakpointMobile) {
+    text-align: center;
+  }
+  font-size: 38px;
+  color: variables.$fontColor-secondary;
+}
+
+.banner__titleWrapper__title--altColor {
+  color: variables.$fontColor-tertiary;
+}
+
+.banner__titleImageWrapper {
+  @media (max-width: variables.$breakpointMobile) {
+    width: 200px;
+  }
+  width: 300px;
+  filter: variables.$dropShadow;
+  transform: rotate(-15deg);
+}
+
+.banner__titleImageWrapper__image {
+  width: 100%;
+}
+
+// ********** ORDER SECTION **********
+
+.banner__orderButtonContainer {
+}
+
+.banner__orderButtonContainer__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.banner__orderButtonContainer__wrapper__button {
+  @include mixins.buttonStyle;
+}
+
+.banner__orderPrice {
+  font-size: 28px;
+  font-family: variables.$boniatoFontFamily;
+  color: variables.$fontColor-secondary;
+}
+
+// ********** SOCIAL NETWORK SECTION **********
+
+.banner__socialNetworks {
+  @media (max-width: variables.$breakpointMobile) {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  display: flex;
+  width: fit-content;
+  font-size: 28px;
+}
+
+.banner__socialNetworks__link__icon {
+  color: variables.$fontColor-tertiary;
+}

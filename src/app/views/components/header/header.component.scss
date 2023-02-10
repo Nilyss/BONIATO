@@ -130,6 +130,7 @@
   font-family: variables.$boniatoFontFamily;
   font-size: 20px;
   cursor: pointer;
+  color: variables.$fontColor-secondary;
   &:hover {
     color: variables.$fontColor-tertiary;
     text-decoration: underline 3px solid variables.$fontColor-tertiary;
